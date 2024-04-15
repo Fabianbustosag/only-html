@@ -1,0 +1,16 @@
+%input{:class => "menu-use-case", "type" => "checkbox", "id" => "menu-use-case"}
+%label{:for => "menu-use-case"}
+  Use case with a menu
+.joystick
+  -(1..28).each do |hover|
+    %a{:class => "joystick__hover hover-#{hover}", "href" => "#"}
+  -(1..28).each do |led|
+    %div{:class => "joystick__led led-#{led}"}
+  .joystick__zero
+  .joystick__stick
+  .joystick__ball
+  %ul.menu
+    -(1..28).each do |menu|
+      %li{:class => "menu-item menu-item-#{menu}"}
+        %span
+          Menu item #{menu}

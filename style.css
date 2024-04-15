@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+* {
+    font-family: 'Inter';
+}
+
+body {
+    display: grid;
+    grid-template-areas: none;
+    background-color: white;
+    gap: 2px;
+    grid-template-columns: 10fr 80fr;
+    grid-template-rows: 50px 1fr 80px;
+    min-height: 98vh; /* Que ocupe como minimo todo el espacio  */
+    grid-template-areas: 
+    "header header"
+    "aside main"
+    "footer footer"    
+    ;
+}
+
+/* ------------------------ HEADER ------------------------  */
+
+header {
+    background-color: transparent;
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-logo{
+    color: #5350fb;
+    font-size: 18px;
+}
+
+.nav-button{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-self: center;
+}
+
+
+.header-login{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-login a:nth-child(2){
+    background-color: #5350fb;
+    color: white;
+    height: 20px;
+    width: 90px;
+    padding: 8px 12px 8px 12px;
+    border-radius: 20px;
+
+
+}
+
+.header-login a:nth-child(2):hover{
+    transform: scale(1.1);
+
+}
+
+ul {
+    border:  3px solid gray;
+    display: flex;
+    gap: 15px;
+    list-style-type: none;
+    align-items: center;
+    padding: 0;
+}
+
+li a {
+    text-decoration: none;
+    color: black;
+}
+
+li a:hover{
+    color: #433ffc;
+    
+}
+
+/* ------------------------ MAIN ------------------------  */
+
+main {
+    background-color: gray;
+    grid-area: main;
+}
+
+/* ------------------------ ASIDE ------------------------  */
+
+aside {
+    background-color: transparent;
+    grid-area: aside;
+}
+
+
+.aside-buttons{
+    display: flex;
+    flex-direction: row;
+}
+
+.aside-buttons a:nth-child(1){
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border: #433ffc;
+    border-radius: 20px;
+    background-color: #433ffc;
+    justify-content: center;
+}
+
+
+.aside-buttons a:nth-child(2){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    text-decoration: none;
+    border: 2px solid #433ffc;
+    border-radius: 20px;
+    color: #433ffc;
+    background-color: transparent;
+}
+
+
+/* ------------------------ FOOTER ------------------------  */
+
+
+footer{
+    background-color: gray;
+    grid-area: footer;
+}
+
+
+
+
+
